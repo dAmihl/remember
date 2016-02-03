@@ -20,6 +20,16 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
+	UFUNCTION(BlueprintCallable, Category="UtilityFunctions")
+	TArray<int32> GetMatrix();
 	
+	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
+	AMat4* Transpose();
+
+	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
+	AMat4* Multiply(AMat4* matB);
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Data")
+	TArray<int32> matrixData;
 	
 };
