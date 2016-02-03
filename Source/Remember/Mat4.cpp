@@ -12,7 +12,27 @@ AMat4::AMat4()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// init matrix
-	matrixData.Init(0, MATRIX_SIZE*MATRIX_SIZE);
+	//matrixData.Init(0, MATRIX_SIZE*MATRIX_SIZE);
+	matrixData.Add(1);
+	matrixData.Add(3);
+	matrixData.Add(1);
+	matrixData.Add(2);
+
+	matrixData.Add(1);
+	matrixData.Add(1);
+	matrixData.Add(2);
+	matrixData.Add(1);
+
+	matrixData.Add(1);
+	matrixData.Add(1);
+	matrixData.Add(1);
+	matrixData.Add(2);
+
+	matrixData.Add(1);
+	matrixData.Add(1);
+	matrixData.Add(1);
+	matrixData.Add(1);
+
 
 }
 
