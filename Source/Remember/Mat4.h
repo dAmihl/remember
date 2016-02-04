@@ -24,12 +24,22 @@ public:
 	TArray<int32> GetMatrix();
 	
 	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
-	AMat4* Transpose();
+	void Transpose();
 
 	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
 	AMat4* Multiply(AMat4* matB);
+
+	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
+	AMat4* TileMatrix(int32 index);
+
+	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
+	void SetIdentity();
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Data")
 	TArray<int32> matrixData;
+
+	void SetMatrixData(TArray<int32> arr);
 	
+	void InterpreteArrayData();
+
 };
