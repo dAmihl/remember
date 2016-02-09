@@ -2,6 +2,7 @@
 
 #include "Remember.h"
 #include "Mat4.h"
+#include "time.h"
 
 #define MATRIX_SIZE 4
 
@@ -157,5 +158,24 @@ void AMat4::InterpreteArrayData() {
 		}
 		
 	}
+}
+
+void AMat4::MakeRandomMatrix()
+{
+
+	int numberTrapsInFirstLevel = 2;
+	srand(time(NULL));
+
+	for (int i = 0; i < MATRIX_SIZE * MATRIX_SIZE; i++) {
+		matrixData[i] = rand() % 4;
+	}
+
+	int index = 0;
+	for (int j = 0; j < numberTrapsInFirstLevel; j++) {
+		index = rand() % (MATRIX_SIZE*MATRIX_SIZE);
+		matrixData[index] = 4;
+	}
+
+
 }
 

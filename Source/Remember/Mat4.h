@@ -42,4 +42,7 @@ public:
 	
 	void InterpreteArrayData();
 
+	UFUNCTION(BlueprintCallable, Category = "UtilityFunctions")
+		void MakeRandomMatrix();
+
 };
