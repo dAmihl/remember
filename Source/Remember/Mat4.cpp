@@ -153,7 +153,7 @@ void AMat4::InterpreteArrayData() {
 			count++;
 		}
 
-		if (qsum % 4 == 0) {
+		if (qsum % 5 == 0) {
 			matrixData[i] = 4;
 		}
 		
