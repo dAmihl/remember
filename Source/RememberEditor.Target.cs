@@ -5,21 +5,15 @@ using System.Collections.Generic;
 
 public class RememberEditorTarget : TargetRules
 {
-	public RememberEditorTarget(TargetInfo Target)
+	public RememberEditorTarget(TargetInfo Target) : base (Target)
 	{
 		Type = TargetType.Editor;
+		
+		ExtraModuleNames.Add("Remember");
 	}
 
 	//
 	// TargetRules interface.
 	//
 
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "Remember" } );
-	}
 }

@@ -5,21 +5,13 @@ using System.Collections.Generic;
 
 public class RememberTarget : TargetRules
 {
-	public RememberTarget(TargetInfo Target)
+	public RememberTarget(TargetInfo Target) : base (Target)
 	{
 		Type = TargetType.Game;
+		ExtraModuleNames.Add("Remember");
 	}
 
 	//
 	// TargetRules interface.
 	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "Remember" } );
-	}
 }
